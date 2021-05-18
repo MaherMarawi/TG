@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-3</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            width: 500px;
+            height: 300px;
+        }
+        p{
+            text-align: center;
+        }
+        div {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+        .div1 {
+            transition: all 2s ease-in-out;
+        }
+        .div2 {
+            transition: all 2s ease-in;
+        }
+        .div3 {
+            transition: all 2s ease-out;
+        }
+        .div4 {
+            transition: 2s cubic-bezier(.5,.26,.71,.91);
+        }
+        .div5 {
+            transition: all 2s cubic-bezier(.53,.99,.65,-0.58);
+        }
+        .container:hover .div2 {
+            transform: translateX(840%);
+            border-radius: 25%;
+            background-color: red;
+        }
+        .container:hover .div1 {
+            transform: translateX(840%);
+            border-radius: 50%;
+            background-color: red;
+        }
+        .container:hover .div3 {
+            transform: translateX(840%);
+            background-color: red;
+        }
+        .container:hover .div4 {
+            transform: translateX(840%);
+            background-color: red;
+        }
+        .container:hover .div5 {
+            transform: translateX(840%);
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>Transitions kent verschillende transition-timing. Zie hieronder een voorbeeld. Maak het na.</h3>
+    <img width="500px" src="transitions.gif">
+    </video>
+
+    <div class="container">
+        <div class="div1"><p>1</p></div>
+        <div class="div2"><p>2</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div4"><p>4</p></div>
+        <div class="div5"><p>5</p></div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-1</title>
+    <style>
+        h6 {
+            color: red;
+        }
+        h6 {
+            color: blue;
+        }
+        .main-heading { 
+                color: green; 
+            }
+            div {
+                color: blueviolet;
+            }
+    </style>
+</head>
+
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>Styling die je toepast wordt toegepast in een bepaalde volgorde. Het kan voorkomen dat je styling toepast en
+        vervolgens niet het gewenste resultaat ziet. Cascade en Inheritance zijn belangrijke concepten om te begrijpen
+        hoe styling werkt. Lees hier in de officiële documentatie meer over cascade en inheritance.
+        Zoek ook andere referenties om het concept te begrijpen.
+
+        Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden om je antwoord uit te
+        leggen.
+    </h3>
+    <h3>Cascade</h3>
+    <p>dit betekent dat de volgorde van CSS-regels ertoe doet; wanneer twee regels van toepassing zijn die dezelfde
+        specificiteit hebben, wordt degene die als laatste in de CSS komt, degene die zal worden gebruikt.</p>
+        <p>voorbeeld</p>
+        <code>h6 {
+            color: red;
+        }
+        h6 {
+            color: blue;
+        }</code>
+        <h6>h6</h6>
+        <h6>h6</h6>
+
+        <h3>Specificity</h3>
+        <p>Specificiteit is hoe de browser beslist welke regel van toepassing is als meerdere regels verschillende selectors hebben, maar nog steeds van toepassing kunnen zijn op hetzelfde element. Het is in feite een maatstaf voor hoe specifiek de selectie van een selector zal zijn:
+
+            Een elementenselector is minder specifiek - het selecteert alle elementen van dat type die op een pagina verschijnen - en krijgt dus een lagere score.
+            Een klassenkiezer is specifieker - hij selecteert alleen de elementen op een pagina die een specifieke klasse-attribuutwaarde hebben - en krijgt dus een hogere score.</p>
+            <code>h1 class="main-heading">This is my heading./h1</code>
+            <code>.main-heading { 
+                color: red; 
+            }
+                    
+            h1 { 
+                color: blue; 
+            }</code>
+            <h1 class="main-heading">Specificity</h1>
+
+            <h3>Inheritance</h3>
+            <p>Overerving moet ook in deze context worden begrepen - sommige CSS-eigenschapswaarden die zijn ingesteld op bovenliggende elementen, worden geërfd door hun onderliggende elementen, en andere niet.</p>
+            <code>div {
+                color: blueviolet;
+            }</code>
+            <div>
+                <span>span binnen de div</span>
+            </div>
+            
+
+</html>

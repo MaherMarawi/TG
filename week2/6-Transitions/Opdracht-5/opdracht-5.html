@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-5</title>
+    <style>
+       .container {
+           width: 400px;
+           height: 300px;
+           border: 3px solid black;
+       }
+       .box {
+           width: 150px;
+           height: 145px;
+           position: absolute;
+           background-color: #fcbec8;
+           transition: 1s ease-in;
+           top: 447px;
+           left: 15px;
+       }
+       .ha {
+           /* margin: 5px; */
+           transition: .5s ease-in 1s;
+           border: 8px solid black;
+       }
+       .container:hover .box{
+        transform: rotate(30deg) translateX(130px) translateY(50px);
+       }
+       .container:hover .ha{
+        background-color: #ff9cad;
+       }
+    </style>
+</head>
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>Hieronder zie je wederom een voorbeeld van een transition. Je kunt op verschillende properties transitions aangeven. Zoek uit op welke properties de transitions zitten en maak het na. Je eigen creativiteit gebruiken is uiteraard toegestaan.</h3>
+        <img src="chicken-suprise.gif" width="400px">
+    
+        <div class="container">
+            <img class="ha" width="145px" height="145px" src="5.png">
+            <div class="box">
+
+            </div>
+        </div>
+</body>
+</html>

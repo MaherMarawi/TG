@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-3</title>
+    <style>
+        body {
+            width: 60%;
+        }
+        li::marker {
+            color: rgb(255, 0, 255);
+        }
+        ul > li {
+            margin-top: 5%;
+        }
+        input[type=file]::file-selector-button {
+            border: 2px solid #6c5ce7;
+            padding: .2em .4em;
+            border-radius: .2em;
+            background-color: #a29bfe;
+            transition: 1s;
+        }
+
+        input[type=file]::file-selector-button:hover {
+            background-color: #81ecec;
+            border: 2px solid #00cec9;
+        }
+        textarea {
+            width: 500px;
+            height: 100px;
+        }
+        input[type=text]::placeholder {
+            color: coral;
+            font-style: italic;
+            font-weight: bold;
+        }
+        input {
+            display: block;
+        }
+        ::selection {
+            color: red;
+            background-color: aquamarine;
+        }
+        p::first-letter{
+            font-size: xx-large;
+            color: cornflowerblue;
+        }
+        p.p1::first-line {
+            background-color: #00cec9;
+            font-style: oblique;
+        }
+        span::after{
+            content: " this is after";
+            color: rgb(0, 194, 0);
+        }
+        span::before{
+            content: "this is before ";
+            color: rgb(255, 183, 0);
+        }
+        span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>Er zijn aldus 14 verschillende pseudo elementen. Je hebt ze in de voorgaande opdracht reeds opgezocht en
+        uitgezocht wat ze doen. Kun je van al deze pseudo-elementen een voorbeeld maken?</h3>
+    <ul>
+        <li>::file-selector-button</li>
+        <textarea>
+            html 
+            <form>
+                <label for="fileUpload">Upload file</label>
+                <input type="file" id="fileUpload">
+              </form>
+              Css 
+              input[type=file]::file-selector-button {
+                border: 2px solid #6c5ce7;
+                padding: .2em .4em;
+                border-radius: .2em;
+                background-color: #a29bfe;
+                transition: 1s;
+              }
+              input[type=file]::file-selector-button:hover {
+                background-color: #81ecec;
+                border: 2px solid #00cec9;
+              }
+        </textarea>
+        <form>
+            <label for="fileUpload">Upload file</label>
+            <input type="file" id="fileUpload">
+          </form>
+
+        <li>::marker</li>
+        <textarea>li::marker {
+            color: rgb(255, 0, 255);
+        }</textarea>
+        <ol>
+            <li>first </li>
+            <li>second</li>
+        </ol>
+
+        <li>::placeholder</li>
+        <textarea>
+            input[type=text]::placeholder {
+                color: coral;
+                font-style: italic;
+                font-weight: bold;
+            }
+        </textarea>
+        <input type="text" placeholder="typ hier">
+
+        <li>::selection</li>
+        <textarea>
+            ::selection {
+                color: red;
+                background-color: aquamarine;
+            }
+        </textarea>
+        <p>try to select this paragraph or any text you see</p>
+        
+        <li>::before</li>
+        <textarea>
+            span::before{
+                content: "this is before ";
+                color: rgb(255, 183, 0);
+            }
+        </textarea>
+        <span>see the begin of the span</span>
+        <li>::first-letter</li>
+        <textarea>
+            p::first-letter{
+                font-size: xx-large;
+                color: cornflowerblue;
+            }
+        </textarea>
+        <p>see the first letter in each paragraph</p>
+        <li>::after</li>
+        <textarea>
+            span::after{
+                content: " this is after";
+                color: rgb(0, 194, 0);
+            }
+        </textarea>
+        <span>see the end of the span span</span>
+
+        <li>::first-line</li>
+        <textarea>
+            p::first-line {
+            background-color: #00cec9;
+            font-style: oblique;
+        }</textarea>
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae molestiae aut molestias excepturi nam tenetur dicta, dolorem incidunt nisi voluptate ipsam architecto ratione earum aliquam reprehenderit blanditiis odit non ab?</p>
+
+
+    </ul>
+</body>
+
+</html>

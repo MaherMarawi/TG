@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-6</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .container div {
+            border-radius: 20px;
+            border: 1px solid black;
+            width: 150px;
+            height: 200px;
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            position: relative;
+        }
+        .box1 {
+            transition: .2s ease;
+        }
+        .box2 {
+            left: -100px;
+            transition: .2s ease;
+        }
+        .box3 {
+            left: -200px;
+            transition: .2s ease;
+        }
+        .box4 {
+            left: -300px;
+            transition: .2s ease;
+        }
+        .box1:hover  {
+            transform: translateY(-30px);
+            margin-right: 100px;
+        }
+        .box2:hover  {
+            transform: translateY(-30px);
+            margin-right: 100px;
+        }
+        .box3:hover  {
+            transform: translateY(-30px);
+            margin-right: 100px;
+        }
+        .box4:hover  {
+            transform: translateY(-30px);
+            margin-right: 100px;
+        }
+
+        .box1:hover ~ .box2 ,.box1:hover ~ .box3,.box1:hover ~ .box4  {
+            color: red;
+        }
+        .box2:hover ~ .box3 ,.box2:hover ~ .box4 {
+            color: red;
+        }
+        .box3:hover ~ .box4 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>
+        Zie de onderstaande card deck. Kun jij deze zelf namaken? Je mag uiteraard weer je eigen creativiteit erop los
+        laten.
+    </h3>
+    <img src="transition_cards.gif" width="500px">
+
+    <div class="container">
+        <div class="box1">
+            <p>Article septemper 16, 2019</p>
+            <h3>Placeholder title</h3>
+            <p>Author: Kim Sing</p>
+        </div>
+        <div class="box2">
+            <p>Article septemper 16, 2019</p>
+            <h3>Placeholder title</h3>
+            <p>Author: Kim Sing</p>
+        </div>
+        <div class="box3">
+            <p>Article septemper 16, 2019</p>
+            <h3>Placeholder title</h3>
+            <p>Author: Kim Sing</p>
+        </div>
+        <div class="box4">
+            <p>Article septemper 16, 2019</p>
+            <h3>Placeholder title</h3>
+            <p>Author: Kim Sing</p>
+        </div>
+    </div>
+</body>
+
+</html>

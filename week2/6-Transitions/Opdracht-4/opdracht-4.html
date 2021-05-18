@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-4</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .box {
+            width: 25px;
+            height: 25px;
+            border: solid 1px black;
+        }
+        .box1 {
+            position: relative;
+            top: 45%;
+            left: 45%;
+            transition: all 2s;
+        }
+        .box2 {
+            position: relative;
+            top: 32%;
+            left: 45%;
+            transition: all 2s;
+        }
+        .box3 {
+            position: relative;
+            top: 19%;
+            left: 45%;
+            transition: all 2s 1s;
+        }
+        .container:hover .box2 {
+            transform: translate(-180px,-91px);
+        }
+        .container:hover .box1 {
+            transform: translate(195px,-91px);
+        }
+        .container:hover .box3 {
+            transform: translate(-180px,82px);
+        }
+        p {
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>Je kunt op verschillende properties transitions aangeven. Zie hieronder een voorbeeld. Zoek uit op welke
+        properties de transitions zitten en maak het ongeveer hetzelfde na.</h3>
+    <img src="advanced-transition.gif" width="400px">
+
+    <div class="container">
+        <div class="box box1">
+            <p>1</p>
+        </div>
+        <div class="box box2">
+            <p>2</p>
+        </div>
+        <div class="box box3">
+            <p>3</p>
+        </div>
+    </div>
+</body>
+
+</html>

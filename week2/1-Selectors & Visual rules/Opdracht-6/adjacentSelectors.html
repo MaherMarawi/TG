@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adjacent selectors</title>
+    <style>
+        h1.opener + h2 {
+            margin-top: -5mm;
+        }
+        h2 + p {
+            margin-top: -5mm;
+        }
+    </style>
+</head>
+<body>
+    <h4><a href="opdracht-6.html">terug</a></h4>
+    <h3>adjacent selectors</h3>
+    <h1 class="opener">hello</h1>
+    <h2>world</h2>
+    <p>welcom!!!</p>
+    <p>Aangrenzende sibling selectors hebben de volgende syntaxis: E1 + E2, waarbij E2 het onderwerp is van de selector. De selector komt overeen als E1 en E2 dezelfde ouder delen in de documentboom en E1 onmiddellijk voorafgaat aan E2, waarbij niet-elementknooppunten worden genegeerd (zoals tekstknooppunten en opmerkingen)</p>
+</body>
+</html>

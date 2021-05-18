@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-4</title>
+    <style>
+        .box {
+            background-color: #bbfdae;
+            margin: 20px;
+            text-align: center;
+            font-size: xx-large;
+            /* padding-top: 3%; */
+            width: 100px;
+        }
+        .container1 {
+            background-color: #faffae;
+            padding: 5px;
+            display: flex;
+        }
+        .container1 div {
+            flex-grow: 1;
+        }
+        .container1 div:nth-of-type(2) {
+            flex-grow: 5;
+        }
+
+        .container2 {
+            background-color: #faffae;
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .container2 div {
+            /* flex-grow: 1; */
+        }
+        .container3 {
+            background-color: #faffae;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container4 {
+            background-color: #faffae;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>De property ‘justify-content’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door gebruik te maken van de justify-content property. </h3>
+    
+
+    <div class="container1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+    </div>
+    <div class="container4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+</body>
+</html>

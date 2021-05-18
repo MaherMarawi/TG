@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht-4</title>
+    <style>
+        #btn {
+            margin-top: 100px;
+            display: block;
+            width: 61%;
+            height: 65px;
+            color: #ecfcfe;
+            background-color: #20b2aa;
+            /* border: none; */
+            font-size: 35px;
+            position: relative;
+            border: none;
+            transition: .4s;
+        }
+        #btn::before {
+            content: "";
+            display: block;
+            width: 7%;
+            height: 55px;
+            border-left: 10px solid #ff6347;
+            border-top: 10px solid #ff6347;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #btn::after {
+            content: "";
+            display: block;
+            width: 7%;
+            height: 55px;
+            border-right: 10px solid #ff6347;
+            border-bottom: 10px solid #ff6347;
+            position: absolute;
+            top: 0px;
+            left: 775px;
+        }
+        #btn:hover{
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <h4><a href="../../Opdrachten.html">terug</a></h4>
+    <h3>Hieronder vind je een voorbeeld van het gebruik van een pseudo-element. Kun jij dit namaken?</h3>
+    <img src="pasted image 0.png">
+
+    <button id="btn">Button</button>
+    
+</body>
+</html>
