@@ -1,0 +1,19 @@
+%btn {
+    font-family: $font-stack;
+    border: solid 1px $secondary-color;
+    background-color: transparent;
+    color: $secondary-color;
+    width: 100px;
+    height: 30px;
+}
+
+.buy-btn {
+    @extend %btn;
+    color: $primary-color;
+}
+
+.show-btn {
+    @extend %btn;
+    color: $secondary-color;
+}
+

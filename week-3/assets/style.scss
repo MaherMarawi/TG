@@ -1,0 +1,68 @@
+
+@import "config";
+@import "buttons";
+@import "layouts";
+
+*{
+    // border: 1px solid red;
+}
+body {
+    box-sizing: border-box;
+    font-family: $font-stack;
+    margin: 0;
+    background-color: $donker-bg-color;
+}
+.head {
+    ul {
+        @include box;
+        background-color: $light-bg-color;
+        margin: 0;
+        li {
+            padding: 5px 20px;
+            list-style-type: none;
+        }
+    }
+    img {
+        width: 100%;
+        filter: brightness(.4);
+        margin: 0;
+    }
+    div {
+        color: $primary-color;
+        position: absolute;
+        top: 35%;
+        left: 70%;
+        transform: translate(-45%, -55%);
+        div {
+            @include box;
+            top: 105%;
+            left: 25%;
+            button {
+                margin: 5px;
+            }
+        }
+    }
+}
+.gerechten {
+    h1 {
+        text-align: center;
+    }
+    .gerecht-dish-div {
+        width: 90%;
+        margin: 1px auto;
+        @include box-between;
+        div {
+            img {
+                margin-left: 10%;
+                width: 200px;
+            }
+            div{
+                width: 250px;
+                div {
+                    @include box-between;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

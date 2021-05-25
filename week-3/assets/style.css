@@ -1,0 +1,77 @@
+.show-btn, .buy-btn {
+  font-family: "Lobster", cursive;
+  border: solid 1px #80b380;
+  background-color: transparent;
+  color: #80b380;
+  width: 100px;
+  height: 30px;
+}
+
+.buy-btn {
+  color: #6187d8;
+}
+
+.show-btn {
+  color: #80b380;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+  margin: 0;
+  background-color: #756c6c;
+}
+
+.head ul {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #b0a9a9;
+  margin: 0;
+}
+.head ul li {
+  padding: 5px 20px;
+  list-style-type: none;
+}
+.head img {
+  width: 100%;
+  filter: brightness(0.4);
+  margin: 0;
+}
+.head div {
+  color: #6187d8;
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translate(-45%, -55%);
+}
+.head div div {
+  display: flex;
+  justify-content: flex-end;
+  top: 105%;
+  left: 25%;
+}
+.head div div button {
+  margin: 5px;
+}
+
+.gerechten h1 {
+  text-align: center;
+}
+.gerechten .gerecht-dish-div {
+  width: 90%;
+  margin: 1px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.gerechten .gerecht-dish-div div img {
+  margin-left: 10%;
+  width: 200px;
+}
+.gerechten .gerecht-dish-div div div {
+  width: 250px;
+}
+.gerechten .gerecht-dish-div div div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

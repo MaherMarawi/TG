@@ -1,0 +1,16 @@
+$bg-color: #001219;
+$primary-color: #8a817c;
+$secondary-color: #7b2cbf;
+$font-stack: "Hack";
+$menu-color: #ba2cbf;
+
+$light-p-color: rgb(52, 52, 52);
+$light-s-color: #7b2cbf;
+
+$light-bg-color: #c1b8b3;
+
+:export {
+    light-p-color: $light-p-color;
+    light-s-color: $light-s-color;
+    light-bg-color: $light-bg-color;
+}

@@ -1,0 +1,43 @@
+#container{
+    border: 5px rgb(67, 141, 252) solid;
+    margin-left: 600px;
+    margin-top: 100px;
+    height: 380px;
+    width: 310px; 
+    background-color: rgb(0, 20, 65);
+}
+.buttons-n{
+    width: 40px;
+    margin: 5px;
+    margin-left: 9px;
+}
+#mainbord{
+    resize: none;
+    color: rgb(0, 0, 0);
+    width: 300px;
+    height: 90px;
+    border-bottom: 3px 	rgb(67, 141, 252) solid;
+    margin-bottom: 5px;
+    background-color: rgb(113, 156, 255);
+}
+.clear{
+    width: 100px;
+    margin: 5px;
+    margin-left: 9px;
+}
+.buttons-m{
+    width: 95px;
+    margin: 5px;
+    margin-left: 20px;
+}
+#equal{
+    width: 163px;
+    margin: 0px;
+    margin-left: 10px;
+}
+#calc{
+    margin: 0px;
+    text-align: center; 
+    font-family: MV Boli;
+    color: rgb(0, 94, 201);
+}

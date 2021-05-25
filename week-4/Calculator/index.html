@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <textarea type="text" class="form-control" id="mainbord" placeholder="0" onkeypress='return (event.charCode >= 43 && event.charCode <= 57 && event.charCode != 44) || event.charCode == 88 || event.charCode == 120'></textarea>
+        <div style="text-align: center;"><label id="calc">Calculator</label></div>
+        <button type="button" class="btn btn-outline-secondary clear" id="clear">Clear</button>
+        <button type="button" class="btn btn-outline-danger buttons-n" id="sqrt">√</button>
+        <button type="button" value="+" class="btn btn-outline-danger buttons-m" id="+">+</button>
+        <br>
+        <button type="button" value="1" class="btn btn-outline-primary buttons-n" id="1">1</button>
+        <button type="button" value="2" class="btn btn-outline-primary buttons-n" id="2">2</button>
+        <button type="button" value="3" class="btn btn-outline-primary buttons-n" id="3">3</button>
+        <button type="button" value="-" class="btn btn-outline-danger buttons-m" id="-">-</button>
+        <br>
+        <button type="button" value="4" class="btn btn-outline-primary buttons-n" id="4">4</button>
+        <button type="button" value="5" class="btn btn-outline-primary buttons-n" id="5">5</button>
+        <button type="button" value="6" class="btn btn-outline-primary buttons-n" id="6">6</button>
+        <button type="button" value="x" class="btn btn-outline-danger buttons-m"idx>x</button>
+        <br>
+        <button type="button" value="7" class="btn btn-outline-primary buttons-n" id="7">7</button>
+        <button type="button" value="8" class="btn btn-outline-primary buttons-n" id="8">8</button>
+        <button type="button" value="9" class="btn btn-outline-primary buttons-n" id="9">9</button>
+        <button type="button" value="/" class="btn btn-outline-danger buttons-m" id="/">/</button>
+        <br>
+        <button type="button" value="0" class="btn btn-outline-primary buttons-n" id="0">0</button>
+        <button type="button" value="." class="btn btn-outline-primary buttons-n" id="0">.</button>
+        <button type="button" class="btn btn-outline-secondary" id="equal">=</button>
+    </div>
+
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
