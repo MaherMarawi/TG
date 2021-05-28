@@ -64,29 +64,42 @@ const BGcolor = '#001219';
 
 const lightPcolor = "rgb(52, 52, 52)";
 const lightScolor =" #7b2cbf";
-const lightBGcolor = '#c1b8b3';
+const lightBGcolor = '#dad3cf';
 
 const lMode = document.getElementById('l-mode')
 const mode = document.getElementById('mode')
 const steren = document.querySelectorAll('.shooting_star')
 const ster = document.getElementById('animatie-dark')
-
+const pr = document.querySelectorAll('.pr')
+const allNav = document.getElementById('nav')
 mode.addEventListener('click', () => {
     
     if (lMode.alt === 'sun') {
-        lMode.src = './moon.png';
+        lMode.src = './img/moon.png';
         lMode.alt = 'moon'
         body.style.background = lightBGcolor;
-        body.style.color = lightPcolor;
+        body.style.color = lightScolor;
         ster.style.display = 'none';
         mainTitle.style.color = 'rgb(7, 150, 102)'
+        allNav.style.background = lightPcolor;
+        allNav.style.boxShadow = '5px 10px 18px rgb(52, 52, 52)';
+        allNav.style.borderBottom = 'none'
+        pr.forEach(a => {
+            a.style.color = lightScolor
+        });
     } else {
         lMode.alt = 'sun'
-        lMode.src = './sunny.svg';
+        lMode.src = './img/sunny.svg';
         body.style.background = BGcolor;
         body.style.color = Pcolor;
         ster.style.display = 'block';
         mainTitle.style.color = Pcolor
+        allNav.style.background = BGcolor
+        allNav.style.boxShadow = 'none';
+        allNav.style.borderBottom = '1px solid #7b2cbf'
+        pr.forEach(a => {
+            a.style.color = Pcolor
+        });
     }
 })
 

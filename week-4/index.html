@@ -3,12 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Maher Marawi">
+       
+            <meta name="viewport" content="width=device-width, initial-scale=1.0 Minimum-scale=1.0, maximum-scale-2.0, user-scalable=1"
+            >
+
     <title>portfolio</title>
     <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+
 
 </head>
 
@@ -47,7 +55,7 @@
                 <li><a id="about-toggle">ABOUT</a></li>
                 <li><a id="projects-toggle">PROJECT</a></li>
                 <li><a id="contact-toggle">CONTACT</a></li>
-                <li id="mode"><img alt="sun" id="l-mode" width="25px" src="sunny.svg"></li>
+                <li id="mode"><img alt="sun" id="l-mode" width="25px" src="img/sunny.svg"></li>
             </ul>
             <div class="burger">
                 <div></div>
@@ -62,30 +70,30 @@
 
             <div id="about">
                 <p id="about-text">Ik heet Maher en Ik kom uit Syrië, Ik woon al 5 jaar in Nederland Ik heb taal niveau van b1 maar Ik moet nog mijn taal verbeteren, Ik volg een course met Code Matrix Master en het is in verband met MERN Stack en mijn studie in Syrië was ook ict maar door de oorlog heb ik dat niet af gemakt</p>
-                <button>Download CV</button>
+                <a href="Maher-CV.pdf" download="cv"><button>Download CV</button></a>
             </div>
 
 
             <div id="projects" style="display: none;">
-                <a href='https://sheltered-peak-13479.herokuapp.com/' target='_BLANK'>
+                <a class="pr" href='https://sheltered-peak-13479.herokuapp.com/' target='_BLANK'>
                     <div class="box1">
                         <h4>Community</h4>
                         <p>Programers community to help each other </p>
                     </div>
                 </a>
-                <a href='https://rocky-sierra-53521.herokuapp.com/' target='_BLANK'>
+                <a class="pr" href='https://portfolio-maher.herokuapp.com/' target='_BLANK'>
                     <div class="box2">
                         <h4>Portfolio</h4>
                         <p>Oude portfolio</p>
                     </div>
                 </a>
-                <a href='Calculator/index.html' target='_BLANK'>
+                <!-- <a class="pr" href='Calculator/index.html' target='_BLANK'>
                     <div class="box3">
                         <h4>Calculator</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, rerum architecto facere
                             eum laboriosam illum!</p>
                     </div>
-                </a>
+                </a> -->
             </div>
             
             <div id="contact">
@@ -96,6 +104,10 @@
                 <label>message</label>
                 <textarea placeholder="Feel free to contact me"></textarea>
                 <button>Send</button>
+                <label>Mijn email</label>
+                <p>mahermarawi92@gmail.com</p>
+                <label>Phone nummer</label>
+                <p>+31 611857050</p>
             </div>
 
         </div>
