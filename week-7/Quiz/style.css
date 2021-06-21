@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "myFont";
+    src: url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+  }
+*{
+    font-family: 'myFont', cursive;
+    font-size: large;
+}
+#container{
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+#gameDiv {
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 30%;
+    height: 550px;
+    background-color: #007e80;
+    align-items: center;
+    text-align: center;
+}
+.buttons{
+    background-color: #007e80;
+    border: none;
+    border: 5px solid black;
+}
+.ant-btn {
+    width: 350px;
+    height: 40px;
+    /* border-radius: 15px 15px 15px 15px; */
+    border: none;
+    /* margin-left: -10px; */
+    margin-top: 13px;
+    position: relative;
+    left: 40px;
+    /* z-index: 9999; */
+}
+.ant-btn2 {
+    width: 350px;
+    height: 40px;
+    /* border-radius: 15px 15px 15px 15px; */
+    border: none;
+    /* margin-left: -10px; */
+    margin-top: 13px;
+    position: relative;
+    left: -20px;
+    /* z-index: 9999; */
+}
+.ques-style{
+    background-color: #efefef;
+    width: 85%;
+    height: 40px;
+    border-radius: 15px 15px 15px 15px;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding-top: 20px ;
+    z-index: 9999;
+}
+.div-flex{
+    display: flex;
+}
+.label-num{
+    background-color: #efefef;
+    /* position: relative; */
+    /* margin-left: auto; */
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    /* height: 50px; */
+    border-radius: 50%;
+    
+    /* display: inline; */
+    border-top: 5px solid #007e80;
+    border-bottom: 5px solid #007e80;
+    border-left: 20px solid #007e80;
+    border-right: 20px solid #007e80;
+    position: relative;
+    top: -12px;
+    left: 10px;
+    margin-bottom: -45px;
+    z-index: 9999;
+}
+.right-button {
+    background-color: green;
+}
+.wrong-button {
+    background-color: crimson;
+}
+.div-ques{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.ques-nummer {
+    margin: 0;
+}
+.move-btn{
+    position: relative;
+    top: 70%;
+    width: 140px;
+    height: 40px;
+    background-color: #04bdbd;
+    border: none;
+}
+.mm{
+    text-align: center;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+.q-div{
+    margin: 0 auto;
+    /* text-align: center; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: row;
+}
+.ques-t {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}

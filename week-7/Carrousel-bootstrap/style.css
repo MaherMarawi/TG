@@ -1,0 +1,25 @@
+body{
+    background-color: gray;
+}
+.co-container{
+    align-items: center;
+    width: 50%;
+    margin: 50px auto;
+}
+img{
+    border-radius: 5px;
+    max-width: 100%;
+}
+button{
+    display: none!important;
+    
+}
+span{
+    transition: 1s;
+    background-color: rgba(177, 177, 177, 0.455);
+    padding: 190px 40px;
+    border-radius: 5px;
+}
+.co-container:hover > button{
+    display: block!important;
+}
