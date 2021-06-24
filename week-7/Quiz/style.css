@@ -121,3 +121,23 @@
     margin: 0 auto;
     align-items: center;
 }
+.timer{
+    background-color: #efefef;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: -8px;
+    left: 45%;
+    margin-bottom: -45px;
+    color: crimson;
+    transition: .5s;
+    animation: glow 1s infinite;
+}
+@keyframes glow {
+    0%{box-shadow: 0 0 0 rgb(182, 182, 182);}
+    50%{box-shadow: 0 0 30px rgb(182, 182, 182);}
+    100%{box-shadow: 0 0 0 rgb(182, 182, 182);}
+}

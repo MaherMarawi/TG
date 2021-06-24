@@ -1,7 +1,15 @@
-const startBtn = document.createElement('button')
-startBtn.classList.add('buttons')
-startBtn.innerHTML = 'Start'
-document.getElementById('container').appendChild(startBtn)
+const easy = document.createElement('button')
+easy.classList.add('buttons')
+easy.innerHTML = 'Easy'
+const normal = document.createElement('button')
+normal.classList.add('buttons')
+normal.innerHTML = 'Normal'
+const hard = document.createElement('button')
+hard.classList.add('buttons')
+hard.innerHTML = 'Hard'
+document.getElementById('container').appendChild(easy)
+document.getElementById('container').appendChild(normal)
+document.getElementById('container').appendChild(hard)
 const gameDiv = document.createElement('div')
 gameDiv.id = 'gameDiv'
 const levelTitle = document.createElement('h2')
@@ -32,21 +40,18 @@ const eersteHtml = () => {
 const startGame = (e) => {
     currentQues = 1
     if (resultP.innerHTML) gameDiv.removeChild(resultP)
-    startBtn.style.display = 'none'
+    easy.style.display = 'none'
+    normal.style.display = 'none'
+    hard.style.display = 'none'
     gameBegin(e)
     eersteHtml()
     buttonsAdd()
     showQues()
 }
-const x = setTimeout(() => {
-    quesText.innerHTML = ''
-    d.innerHTML = ''
-    currentQues += 1
-    showQues()
-
-}, time);
 /////////////////////////////////--Start button event--///////////////////////////
-startBtn.addEventListener('click', startGame)
+document.querySelectorAll('.buttons').forEach(btn => {
+    btn.addEventListener('click', startGame)
+})
 /////////////////////////////////--Tweede HTML structure--////////////////////////
 const gameBegin = (e) => {
     document.body.appendChild(gameDiv)
@@ -54,7 +59,7 @@ const gameBegin = (e) => {
     levelTitle.innerHTML = 'Math problem'
     levelTitle.classList.add('mm')
     gameDiv.appendChild(levelTitle)
-    newGame(e.target.value)
+    newGame(e.target.innerHTML)
 }
 /////////////////////////////////--Restart function--/////////////////////////////
 const emptyVar = () => {
@@ -74,18 +79,15 @@ const buttonsAdd = () => {
     gameDiv.appendChild(btn1)
 }
 btn2.addEventListener('click', function () {
-    btn1.disabled = false
     currentQues -= 1
-    d.innerText = ''
-    showQues()
+    timer(true, false)
     if (currentQues == 1) btn2.disabled = true
 })
 btn1.addEventListener('click', function () {
     if (currentQues == quesArray.length - 1) eindResult()
     btn2.disabled = false
     currentQues += 1
-    d.innerText = ''
-    showQues()
+    timer(true, false)
 })
 //////////////////////////////--Einde resultaat--/////////////////////////////////
 const eindResult = () => {
@@ -93,15 +95,17 @@ const eindResult = () => {
     quesText.innerHTML = ''
     resultP.innerHTML = `gefeliciteerd je hebt ${correctAnt[0]} uit ${quesArray.length - 1} goed`
     gameDiv.append(resultP)
-    startBtn.innerHTML = 'Restart'
-    startBtn.style.display = 'block'
+    easy.style.display = 'block'
+    normal.style.display = 'block'
+    hard.style.display = 'block'
     emptyVar()
 }
 //////////////////////////////--Bepalen aantal vragen--//////////////////////////
 const newGame = (level) => {
+    console.log(level)
     quesCount = randomNummer(9, 5)
-    time = level == 'easy' ? 10000 : level == 'normal' ? 7000 : 4000
-    time2 = time + 1000
+    time = level == 'Easy' ? 11000 : level == 'Normal' ? 8000 : 5000
+    time2 = time / 1000
     quesMaken(quesCount)
 }
 ////////////////////////////--Willekeurig nummers generating--////////////////////
@@ -118,16 +122,17 @@ const quesMaken = l => {
 const newQues = () => {
     num1 = randomNummer(99, 20)
     num2 = randomNummer(50, 15)
-    num3 = num1 - num2
+    num3 = num1 == num2 ? 0 : num1 - num2
     let ques = []
     ques.length = 6
     ques[0] = `${num1} - ${num2}`
     let ind = randomNummer(5, 1)
     ques[ind] = num3
     correctAnt.push(ind)
-    for (let i = 0; i < ques.length; i++) {
+    for (let i = 1; i < ques.length; i++) {
         if (!ques[i]) {
-            ques[i] = randomNummer(99, 20) - randomNummer(70, 15)
+            let rN = randomNummer(99, 20) - randomNummer(70, 15)
+            ques[i] = rN == num3 ? rN + 1 : rN
         }
     }
     return ques
@@ -139,7 +144,7 @@ const showQues = () => {
     let cQ = quesArray[currentQues]
     for (let i = 0; i < 6; i++) {
         if (i == 0) quesText.innerHTML = `what is ${cQ[0]}`
-         else {
+        else {
             let qDiv = document.createElement('h4')
             qDiv.classList.add('q-div')
             let quesLabel = document.createElement('p')
@@ -187,7 +192,6 @@ const showQues = () => {
                             btn.style.background = 'green'
                             a.classList.add('right-button')
                             quesLabel.classList.add('right-button')
-                            console.log(index + 1 + " " + quesLabel.innerHTML)
                             let labelFout = document.querySelectorAll('.label-num')
                             labelFout.forEach(l => {
                                 if (l.innerHTML == index + 1) l.classList.add('right-button')
@@ -207,11 +211,46 @@ const showQues = () => {
             if (cQ.length > 6) btn.disabled = true
         })
     }
-    //     const x = setTimeout(() => {
-    //         quesText.innerHTML = ''
-    //         d.innerHTML = ''
-    //         currentQues += 1
-    //         showQues()
+    gameDiv.appendChild(timeP)
+    timer()
 
-    // }, time);
+}
+/////////////////////////////////--Tijd function--////////////////////////////////
+function timer(check = false, intCheck = true) {
+    function myFunction() {
+        clearInterval(myVar)
+        if (check == true) {
+            time2 = time / 1000
+            quesText.innerHTML = ''
+            d.innerHTML = ''
+            showQues()
+        } 
+        timeP.innerHTML = '--'
+    }
+    const tt = () => {
+        time2 -= 1
+        if (time2 == 0) {
+            myFunction()
+            quesArray[currentQues][6] = true
+            let foutAnt = document.querySelectorAll('.ant-btn')
+            foutAnt.forEach((btn, index) => {
+                if (index + 1 == correctAnt[currentQues]) {
+                    quesArray[currentQues].push(btn.innerHTML)
+                    btn.style.background = 'green'
+                    btn.disabled = true
+                    quesLabel.classList.add('right-button')
+                    let labelFout = document.querySelectorAll('.label-num')
+                    labelFout.forEach(l => {
+                        if (l.innerHTML == index + 1) l.classList.add('right-button')
+                    })
+                }
+            })
+        }
+        if (quesArray[currentQues].length <= 6) {
+            timeP.innerHTML = time2
+            timeP.classList.add('timer')  
+        } else timeP.innerHTML = '--'
+    }
+    if (intCheck) myVar = setInterval(tt, 1000);
+    else myFunction()
 }
