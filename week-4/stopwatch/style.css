@@ -1,0 +1,83 @@
+body{
+    background-color: gray;
+}
+#container{
+    width: 100%;
+}
+#stopwatch-body{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px rgb(182, 182, 182) solid;
+    margin: 50px auto;
+    background-color: gray;
+    color: rgb(182, 182, 182);
+    transition: .5s;
+}
+#middle-body{
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    border: 1px rgb(182, 182, 182) solid;
+    margin: 29px auto;
+    background-color: rgb(182, 182, 182);
+    
+}
+#inner-body{
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    border: 2px rgb(44, 44, 44) solid;
+    margin: 9px auto;
+    background-color: black;
+    text-align: center;
+}
+h1{
+    margin-top: 35px;
+}
+#buttons{
+    display: flex;
+    text-align: center;
+    margin: 20px 60px;
+    /* padding: 20px; */
+}
+#counter{
+    margin-top: 55px;
+    font-size: 6em;
+}
+button{
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: bold;
+}
+span{
+    margin: -17px;
+    padding: -17px;
+}
+#start-btn{
+    background-color: green;
+    border: 1px solid white;
+}
+#pause-btn{
+    background-color: orange;
+    border: 1px solid white;
+}
+#stop-btn{
+    background-color: crimson;
+    border: 1px solid white;
+}
+.glowing-border { 
+    outline: none;
+    /* border-color: #9ecaed; */
+    animation: glow 1s infinite
+    
+}
+@keyframes glow {
+    0%{box-shadow: 0 0 0 rgb(182, 182, 182);}
+    50%{box-shadow: 0 0 30px rgb(182, 182, 182);}
+    100%{box-shadow: 0 0 0 rgb(182, 182, 182);}
+}
+    

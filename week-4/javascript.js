@@ -3,7 +3,26 @@ const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-menu');
 const body = document.querySelector('body')
 const contact = document.getElementById('contact')
+const Pcolor = "#8a817c";
+const Scolor =" #7b2cbf";
+const BGcolor = '#001219';
+const lightPcolor = "rgb(52, 52, 52)";
+const lightScolor =" #7b2cbf";
+const lightBGcolor = '#dad3cf';
+const lMode = document.getElementById('l-mode')
+const mode = document.getElementById('mode')
+const steren = document.querySelectorAll('.shooting_star')
+const ster = document.getElementById('animatie-dark')
+const pr = document.querySelectorAll('.pr')
+const allNav = document.getElementById('nav')
 const mainTitle = document.getElementById('main-content')
+const project = document.getElementById('projects-toggle')
+const projects = document.getElementById('projects')
+const naam = document.getElementById('naam')
+const aboutToggle = document.getElementById('about-toggle')
+const aboutText = document.getElementById('about')
+const contactToggle = document.getElementById('contact-toggle')
+
 burger.addEventListener('click', () => {
     if (!nav.classList[1]) {
         nav.classList.add('mob-nav-menu')
@@ -11,13 +30,12 @@ burger.addEventListener('click', () => {
         nav.classList.remove('mob-nav-menu')
     }
 })
-const naam = document.getElementById('naam')
+
 body.addEventListener('mousemove', changecolor)
 function changecolor(e) {
     naam.style.color = "rgb(" + e.offsetX + "," + e.offsetY + ", " + ((e.offsetY + e.offsetX)*3)/2 + ")"
 }
-const project = document.getElementById('projects-toggle')
-const projects = document.getElementById('projects')
+
 project.addEventListener('click', () => {
     if (projects.style.display === 'none') {
         mainTitle.style.display = 'none'
@@ -32,8 +50,7 @@ project.addEventListener('click', () => {
     }
 })
 
-const aboutToggle = document.getElementById('about-toggle')
-const aboutText = document.getElementById('about')
+
 aboutToggle.addEventListener('click', () => {
     if (aboutText.style.display === 'none') {
         mainTitle.style.display = 'none'
@@ -46,7 +63,7 @@ aboutToggle.addEventListener('click', () => {
     }
 })
 
-const contactToggle = document.getElementById('contact-toggle')
+
 contactToggle.addEventListener('click', () => {
     if (contact.style.display === 'none') {
         mainTitle.style.display = 'none'
@@ -58,20 +75,7 @@ contactToggle.addEventListener('click', () => {
         mainTitle.style.display = 'block'
     }
 })
-const Pcolor = "#8a817c";
-const Scolor =" #7b2cbf";
-const BGcolor = '#001219';
 
-const lightPcolor = "rgb(52, 52, 52)";
-const lightScolor =" #7b2cbf";
-const lightBGcolor = '#dad3cf';
-
-const lMode = document.getElementById('l-mode')
-const mode = document.getElementById('mode')
-const steren = document.querySelectorAll('.shooting_star')
-const ster = document.getElementById('animatie-dark')
-const pr = document.querySelectorAll('.pr')
-const allNav = document.getElementById('nav')
 mode.addEventListener('click', () => {
     
     if (lMode.alt === 'sun') {
